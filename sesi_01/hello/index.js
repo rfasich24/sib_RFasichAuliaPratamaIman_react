@@ -2,10 +2,10 @@ let score;
 score = 50;
 console.log("Hasil variable score :", score);
 
-let playerName = "Almas";
+let playerName = "R Fasich";
 console.log("hasil variable playerName :", playerName);
 // alert(playerName);
-playerName = "Firdaus";
+playerName = "Pratama";
 console.log("Hallo,", playerName);
 // alert(playerName);
 
@@ -22,7 +22,7 @@ newNum = originalNum + numberToBeAdded;
 console.log("newNum :", newNum);
 
 console.log("Selamat datang di kelas Modern JavaScript Dasar");
-console.log("Nama saya Almas");
+console.log("Nama saya Fasich");
 console.log("JavaScript is Fun");
 
 let message = "Welcome!";
@@ -45,9 +45,9 @@ const angkaKeberuntungan = 10;
 // id, nama, jenkel
 const objectAngkaKeb = { id: 1, name: "almas", jenkel: "L" };
 objectAngkaKeb.id = 2;
-objectAngkaKeb.name = "firdaus";
+objectAngkaKeb.name = "Pratama";
 objectAngkaKeb.jenkel = "Laki - Laki";
-objectAngkaKeb.alamat = "Jember";
+objectAngkaKeb.alamat = "Probolinggo";
 console.log(objectAngkaKeb);
 
 // sample > array

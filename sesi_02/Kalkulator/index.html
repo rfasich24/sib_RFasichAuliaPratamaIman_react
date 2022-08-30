@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmen 1 - RCTN-KS05-013 - R. Fasich Aulia Pratama Iman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="area">
+        <div class="calculator">
+            <form name="form">
+                <input type="text" class="textView" name="textView" id="textView" placeholder="0">
+            </form>
+            <table>
+                <tr>
+                    <td><input type="button" class="button" value="C" onclick="clearCalculator()"></td>
+                    <td><input type="button" class="button del" value="Del" onclick="del()"></td>
+                    <td><input type="button" class="button" value="X" onclick="input('*')"></td>
+                    <td><input type="button" class="button" value="/" onclick="input('/')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="button" value="7" onclick="input(7)"></td>
+                    <td><input type="button" class="button" value="8" onclick="input(8)"></td>
+                    <td><input type="button" class="button" value="9" onclick="input(9)"></td>
+                    <td><input type="button" class="button" value="-" onclick="input('-')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="button" value="6" onclick="input(6)"></td>
+                    <td><input type="button" class="button" value="5" onclick="input(5)"></td>
+                    <td><input type="button" class="button" value="4" onclick="input(4)"></td>
+                    <td><input type="button" class="button" value="+" onclick="input('+')"></td>
+                </tr>
+                <tr>
+                    <td><input type="button" class="button" value="3" onclick="input(3)"></td>
+                    <td><input type="button" class="button" value="2" onclick="input(2)"></td>
+                    <td><input type="button" class="button" value="1" onclick="input(1)"></td>
+                    <td rowspan="2"><input type="button" class="button equal" value="=" onclick="equal()"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" class="button zero" value="0" onclick="input(0)"></td>
+                    <td><input type="button" class="button" value="." onclick="input('.')"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="name">
+            <h2>R. Fasich Aulia Pratama Iman</h2>
+            <h2>RCTN-KS05-013</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

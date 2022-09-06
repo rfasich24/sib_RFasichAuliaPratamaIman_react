@@ -1,0 +1,155 @@
+step pertama
+---
+1. cek npm dan npx nya
+2. create global react
+
+syntax : (auto create react app)
+npm install -g create-react-app
+
+create-react-app --version //cek version
+
+// create project
+create-react-app hello-react
+>> akan terbuat sebuah project dengan nama "hello-react"
+
+step kedua
+---
+1. create folder hello-webpack
+2. npm init -y
+3. install react dan react dom library
+    npm install react react-dom --save // ini versi 18 > membutuhkan es7
+    npm install react@17.0.0 react-dom@17.0.0 // ini versi 17 > membutuhkan es6
+4. instal depedency development
+    npm install webpack webpack-cli webpack-dev-server babel-core babel-loader babel-preset-env babel-preset-react html-webpack-plugin mini-css-extract-plugin --save-dev  		
+		npm install babel-core babel-loader autoprefixer html-webpack-plugin babel-preset babel-preset-env babel-preset-react babel-webpack-plugin --save-dev
+5. create folder src (didalem folder src)
+    > create file index.html
+    > create file index.js
+6. create file (didalem folder hello-webpack)
+    > create file .babelrc
+    > create file webpack.config.js
+7. npm run start //running apps
+
+
+// index.js
+import React from "react";
+import ReactDOM from "react-dom";
+
+const App = () => {
+    return (
+        <div>
+            <h2>Belajar ReactJs | First Application</h2>
+        </div>
+    )
+}
+
+ReactDOM.render(
+    <App />,
+    document.getElementById("app")
+)
+
+// index.html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar ReactJs</title>
+    <style>
+        .container {
+            background-color: burlywood;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div id="app"></div>
+</body>
+
+</html>
+
+// .babelrc
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-react"
+    ]
+}
+
+// webpack.config.js
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+module.exports = {
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: "babel-loader"
+                }
+            },
+            {
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader"]
+            }
+        ]
+    },
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: "./src/index.html",
+            filename: "index.html"
+        }),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        })
+    ]
+};
+
+// add script to package.json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open",
+    "prod": "webpack --mode production"
+  },
+  
+  
+// package.json
+{
+  "name": "hello-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open",
+    "prod": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.5",
+    "babel-preset": "^1.1.7",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-webpack-plugin": "^0.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.1"
+  }
+}

@@ -20,4 +20,3 @@ fetch('https://fake-tweets-api.herokuapp.com/posts')
 .catch(err => {
     console.error(error);
 });
-setTimeoutPromise(1000).then(() => console.log("tick"));

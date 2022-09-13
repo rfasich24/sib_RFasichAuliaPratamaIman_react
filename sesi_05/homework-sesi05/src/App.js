@@ -1,21 +1,21 @@
-import About from "./components/about";
-import Members from "./components/member";
-import Footer from "./components/footer";
-import NavbarTop from "./components/navbarTop"
-import Hactiv8 from "./components/hactiv8"
-import Past from "./components/past"
-import MetUp from "./components/metup";
+import NavbarTop from "./components/nav/navbarTop";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import CreateMeetUp from "./components/page/CreateMeetup";
+import Dashboard from "./components/page/Dashboard";
+import Blog from "./components/page/Blog";
 
 function App() {
     return (
         <>
-            <NavbarTop />
-            <Hactiv8 />
-            <MetUp />
-            <About />
-            <Members />
-            <Past />
-            <Footer />
+            <Router>
+                <NavbarTop />
+                <Routes>
+                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/home" element={<Dashboard />} />
+                    <Route path="/create-meetup" element={<Blog />} />
+                    <Route path="/explore" element={<Blog />} />
+                </Routes>
+            </Router>
         </>
     );
 }

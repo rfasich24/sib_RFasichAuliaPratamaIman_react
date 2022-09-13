@@ -57,6 +57,7 @@ function App() {
         <div className="App">
             <h1>Realtime Clock Using Functional Component</h1>
             <hr />
+            <h2>Today is {date.toLocaleDateString()}</h2>
             <h1>{date.toLocaleTimeString()}</h1>
         </div>
     );

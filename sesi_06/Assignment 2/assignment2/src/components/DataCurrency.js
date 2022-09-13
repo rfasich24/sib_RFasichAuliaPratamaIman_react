@@ -7,8 +7,8 @@ const DataCurrency = () => {
     useEffect(() => {
         fetch(
             "https://api.currencyfreaks.com/latest?apikey=fad413abd8bb45e480c43117edb41682"
-        ).then((res) => {
-            res.json().then((data) => {
+        ).then((resp) => {
+            resp.json().then((data) => {
                 let { CAD, EUR, IDR, JPY, CHF, GBP } = data.rates;
                 setData({ CAD, EUR, IDR, JPY, CHF, GBP });
             });

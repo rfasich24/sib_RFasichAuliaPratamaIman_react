@@ -24,7 +24,7 @@ function Past() {
                     <h4 className="font-bold">Past Meetups</h4>
                 </Col>
                 <Col className="text-end">
-                    <a href="">See All</a>
+                    <a href="#">See All</a>
                 </Col>
             </Row>
 

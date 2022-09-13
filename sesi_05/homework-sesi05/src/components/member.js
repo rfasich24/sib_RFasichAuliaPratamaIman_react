@@ -1,5 +1,5 @@
 import { Row, Col } from "react-bootstrap";
-import logo from "../AppIcon.jpg";
+import logo from "../assets/AppIcon.jpg";
 
 function Members() {
     return (
@@ -9,7 +9,7 @@ function Members() {
                     <h4 className="font-bold">Members</h4>
                 </Col>
                 <Col className="text-end">
-                    <a href="">See All</a>
+                    <a href="#">See All</a>
                 </Col>
             </Row>
             <div className="rectangle p-3">

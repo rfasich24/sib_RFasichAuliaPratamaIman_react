@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import ButtonTest from "./button";
 
 function NavbarTop() {
     return (
@@ -14,7 +15,7 @@ function NavbarTop() {
                         <Nav.Link href="#">Explore</Nav.Link>
                     </Nav>
                     <Nav className="d-flex">
-                        <Nav.Link href="#">Login</Nav.Link>
+                        <ButtonTest/>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

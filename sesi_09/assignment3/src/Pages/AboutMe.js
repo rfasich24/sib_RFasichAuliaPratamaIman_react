@@ -6,7 +6,7 @@ const AboutMe = () => {
                     <h2 className="font-bold text-3xl mb-8">My Social Media</h2>
                     <a
                         className="font-bold"
-                        href="linkedin.com/in/rfasich24"
+                        href="https://www.linkedin.com/in/rfasich24"
                     >
                         Linkedin
                     </a>{" "}
